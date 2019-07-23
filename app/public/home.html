@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FriendFinder</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>Home Page</h1>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron bg-info text-white">
+                    <h1>FriendFinder</h1>
+                    <hr class="my-4 border-white">
+                    <p>Answer a few questions and we'll find you a friend with the greatest compatibility!</p>
+                    <a href="/survey" id="toSurveyButton" class="btn btn-dark">Take the Survey!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-white"><a href="/api/friends" class="text-white">API List</a> | <a href="https://github.com/CiSigep/friendfinder" class="text-white">Repository</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
