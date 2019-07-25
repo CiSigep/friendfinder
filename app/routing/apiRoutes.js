@@ -6,8 +6,30 @@ module.exports = function(app){
     });
 
     app.post("/api/friends", (req, res) => {
-        friends.push(req.body); // TODO: Add validation and escape HTML
+        var newFriend = req.body; // TODO: Add validation and escape HTML
 
-        res.json(req.body);
+        var bestMatch;   
+        var bestDifference = -1;
+        friends.forEach((friend) => {
+            var totalDifference = 0;
+            for(var i = 0; i < 10; i++){
+                newFriend.scores[i] = parseInt(newFriend.scores[i]);
+                totalDifference += Math.abs(newFriend.scores[i] - friend.scores[i]);
+            }
+            if(bestDifference === -1 || totalDifference < bestDifference){
+                bestMatch = friend;
+                bestDifference = totalDifference;
+            }
+        });
+
+
+        friends.push(req.body); 
+
+        var responseObject = {
+            created: newFriend,
+            friend: bestMatch
+        };
+
+        res.json(responseObject);
     });
 }
