@@ -35,10 +35,12 @@
                         <form action="/api/friends">
                             <div class="form-group">
                                 <label for="nameInput">Name(Required)</label>
+                                <span class="text-danger" id="nameError"></span>
                                 <input type="text" name="name" id="nameInput" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="imgInput">Image Link(Required)</label>
+                                <span class="text-danger" id="imageError"></span>
                                 <input type="text" name="imgLink" id="imgInput" class="form-control" required>
                             </div>
                             <fieldset class="border-0 mb-2">
@@ -322,6 +324,7 @@
                                 </div>
                             </fieldset>
                             <button id="surveySubmit" class="btn btn-info" type="submit">Submit</button>
+                            <span class="text-danger" id="validationError"></span>
                         </form>
                     </div>
                 </div>

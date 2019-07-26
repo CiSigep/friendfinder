@@ -1,8 +1,8 @@
 var friends =  [
     {
-        name: "Dude",
-        image: "https://i.imgur.com/67q3eiP.jpg",
-        scores:[1,1,1,1,1,1,1,1,1,1]
+        name: "MySpace Tom",
+        image: "https://i.imgur.com/IZ3Vf9N.jpg",
+        scores:[1,2,3,4,5,4,3,2,1,2]
     }
 ];
 

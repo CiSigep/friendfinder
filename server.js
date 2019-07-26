@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 7001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/static", express.static(path.join(__dirname, "app", "public", "assets")));
+app.use("/static", express.static(path.join(__dirname, "app", "public", "assets"))); // serve static js and css
 
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes.js")(app);
