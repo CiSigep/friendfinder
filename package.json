@@ -20,7 +20,7 @@
   "homepage": "https://github.com/CiSigep/friendfinder#readme",
   "dependencies": {
     "escape-html": "^1.0.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "validator": "^11.1.0"
   }
 }
